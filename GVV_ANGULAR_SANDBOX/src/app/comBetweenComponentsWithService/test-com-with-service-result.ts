@@ -19,7 +19,6 @@ import { SearchService } from './search-service';
 export class TestComWithServiceResult {
   searchTerm = inject(SearchService).searchTerm;
 
-
   contacts = signal<Contact[]>([
     new Contact("John Doe", "11-55-66-77","jd@gmail.com"),
     new Contact("Jane Doe","669-55-55","jane@skype.be"),

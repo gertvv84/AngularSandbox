@@ -5,6 +5,7 @@ import { TestApiPost } from './test-api-post/test-api-post';
 import { MasterComponent } from './childParentComponents/master-component/master-component';
 import { TestModelInputMaster } from './testModelInput/test-model-input-master';
 import { TestComWithServiceMaster } from './comBetweenComponentsWithService/test-com-with-service-master';
+import { TestInterfaceApp } from './testInterface/test-interface-app/test-interface-app';
 
 export const routes: Routes = [
 
@@ -18,6 +19,8 @@ export const routes: Routes = [
     
     {path: 'testModelInput', component: TestModelInputMaster},
 
-    {path: 'testComWithService', component:TestComWithServiceMaster}
+    {path: 'testComWithService', component:TestComWithServiceMaster},
+
+    {path: 'testInterface', component: TestInterfaceApp}
 
 ];
