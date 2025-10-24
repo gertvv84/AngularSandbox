@@ -1,0 +1,47 @@
+<div class="row">
+
+    <div class="col-6">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>username</th>
+                    <th>website</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for(item of userList; track $index){
+                    <tr>
+                        <td>{{item.name}}</td>
+                        <td>{{item.username}}</td>
+                        <td>{{item.website}}</td>
+                        <td>{{item.email}}</td>
+                    </tr>
+                }
+
+            </tbody>
+
+
+        </table>
+
+    </div>
+    <div class="col-6">
+        <!--
+                @for(item of todoList(); track $index){
+                    <ul>
+                        <li>{{item.userId}} - {{item.title}} - {{item.completed}}</li>
+                    </ul>
+                }
+                    -->
+    </div>
+
+    <div class="col-12">
+                @for(item of busUserList(); track $index){
+                    <ul>
+                        <li>{{item.userId}} - {{item.userName}} - {{item.emailId}}</li>
+                    </ul>
+                }        
+    </div>
+
+</div>

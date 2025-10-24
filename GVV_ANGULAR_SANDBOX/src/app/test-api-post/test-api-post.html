@@ -1,0 +1,69 @@
+<div class="row">
+    <div class="col-7">
+        <div class="card">
+            <div class="card-header bg-success">
+                Users List
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Sr No</th>
+                            <th>emailId</th>
+                            <th>fullName</th>
+                            <th>mobileNo</th>
+                            <th>password</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for(item of usersList(); track $index){
+                            <tr>
+                                <td>{{$index+1}}</td>
+                                <td>{{item.emailId}}</td>
+                                <td>{{item.fullName}}</td>
+                                <td>{{item.mobileNo}}</td>
+                                <td>{{item.password}}</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-5">
+        <div class="card">
+            <div class="card-header bg-success">
+                New User
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6">
+                        <label for="email">E-Mail</label>
+                        <input id="email" type="text" class="form-control" [(ngModel)] = "userObj.emailId"/>
+                    </div>
+                    <div class="col-6">
+                        <label for="password">Password</label>
+                        <input id="password" type="text" class="form-control" [(ngModel)] = "userObj.password"/>
+                    </div>
+                    <div class="col-6">
+                        <label for="fullName">Full Name</label>
+                        <input id="fullName" type="text" class="form-control" [(ngModel)] = "userObj.fullName"/>
+                    </div>
+                     <div class="col-6">
+                        <label for="mobileNo">Mobile Number</label>
+                        <input id="mobileNo" type="text" class="form-control" [(ngModel)] = "userObj.mobileNo"/>
+                    </div>                                       
+                </div>     
+                <div class="row pt-3">
+                    <div class="col-6 text-center">
+                        <button class="btn btn-secondary" (click)="reset()">Reset</button>
+                    </div>
+                    <div class="col-6 text-center">
+                        <button class="btn btn-success" (click)="createUser()">Create</button>
+                    </div>                    
+                </div>          
+            </div>
+        </div>
+    </div>
+</div>
